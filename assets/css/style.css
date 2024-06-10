@@ -69,7 +69,21 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
-
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  flex: 1 1 calc(33% - 20px);
+  margin: 10px;
+}
+.card-body {
+  padding: 20px;
+}
+.card .bg-light {
+  width: auto;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
