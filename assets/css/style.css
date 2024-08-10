@@ -30,6 +30,7 @@ head > link[rel="icon"] {
   border-radius: 50%; /* Makes the icon image rounded */
 }
 
+/* Style to make the icon image rounded */
 head > link[rel="apple-touch-icon"] {
   border-radius: 50%; /* Makes the icon image rounded */
 }
@@ -185,7 +186,7 @@ head > link[rel="apple-touch-icon"] {
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
 }
@@ -211,7 +212,7 @@ head > link[rel="apple-touch-icon"] {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover > a {
+.nav-menu li:hover>a {
   text-decoration: none;
   color: #fff;
 }
@@ -219,7 +220,7 @@ head > link[rel="apple-touch-icon"] {
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
-.nav-menu li:hover > a i {
+.nav-menu li:hover>a i {
   color: #149ddd;
 }
 
@@ -261,7 +262,6 @@ head > link[rel="apple-touch-icon"] {
   height: 100vh;
   background: url('Mue Studio.jpeg');
   background-size: cover;
-  background-position: center;
 }
 
 #hero:before {
@@ -279,7 +279,6 @@ head > link[rel="apple-touch-icon"] {
   position: relative;
   z-index: 2;
   min-width: 300px;
-  text-align: center;
 }
 
 #hero h1 {
@@ -316,8 +315,9 @@ head > link[rel="apple-touch-icon"] {
     line-height: 36px;
   }
 
-  #hero p {
-    font-size: 20px;
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
     margin-bottom: 30px;
   }
 }
@@ -422,94 +422,48 @@ section {
   line-height: 40px;
   display: block;
   font-weight: 700;
-  color: #050d18;
-  margin-left: 60px;
+  color: #1d1e1f;
 }
 
 .facts .count-box p {
   font-size: 16px;
-  color: #a3a4b1;
-  margin: 0;
-  margin-left: 60px;
-}
-
-.facts .count-box:nth-child(odd) i {
-  color: #2f5d62;
-}
-
-.facts .count-box:nth-child(even) i {
-  color: #6b5b95;
+  color: #6f7180;
 }
 
 @media (max-width: 768px) {
-  .facts .count-box {
-    padding: 20px;
-  }
-
   .facts .count-box i {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .facts .count-box span {
-    font-size: 32px;
-    line-height: 32px;
-    margin-left: 0;
+    font-size: 36px;
   }
 
   .facts .count-box p {
     font-size: 14px;
-    margin-left: 0;
   }
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# Skills
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
-  overflow: hidden;
+.skills .progress {
+  position: relative;
+  height: 10px;
+  margin-bottom: 20px;
+  background: #e9ecef;
 }
 
-.portfolio .portfolio-item .portfolio-info {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.7);
+.skills .progress .progress-bar {
+  background: #149ddd;
+  height: 100%;
+  transition: width 0.4s ease-in-out;
+}
+
+.skills .progress .progress-bar span {
+  font-size: 13px;
   color: #fff;
-  padding: 15px;
-  text-align: center;
-  transition: 0.4s;
-  opacity: 0;
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-}
-
-.portfolio .portfolio-item img {
-  transition: 0.4s;
-}
-
-.portfolio .portfolio-item:hover img {
-  transform: scale(1.1);
-}
-
-.portfolio .portfolio-item h4 {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.portfolio .portfolio-item p {
-  color: #fff;
-  font-size: 14px;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .portfolio .portfolio-item {
-    margin-bottom: 30px;
-  }
+  line-height: 12px;
 }
 
 /*--------------------------------------------------------------
@@ -517,163 +471,130 @@ section {
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
   padding: 30px;
-  position: relative;
-  border-radius: 5px;
-  background: #fff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
-.testimonials .testimonial-item:before {
-  content: "\f10d";
-  font-family: FontAwesome;
-  font-size: 48px;
-  color: #f2f2f2;
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+.testimonials .testimonial-item i {
+  font-size: 36px;
+  color: #149ddd;
 }
 
-.testimonials .testimonial-item p {
-  font-size: 15px;
-  color: #333;
-}
-
-.testimonials .testimonial-item .pic {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.testimonials .testimonial-item .pic img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-.testimonials .testimonial-item .name {
+.testimonials .testimonial-item h3 {
+  font-size: 18px;
   font-weight: 600;
   color: #333;
 }
 
-.testimonials .testimonial-item .role {
+.testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #a3a4b1;
+  font-weight: 400;
+  color: #6f7180;
+}
+
+.testimonials .testimonial-item p {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: #6f7180;
 }
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .form-control {
-  box-shadow: none;
-  border-radius: 4px;
+.contact .php-email-form {
+  padding: 15px;
+  border-radius: 6px;
 }
 
-.contact .form-control:focus {
+.contact .php-email-form .form-group {
+  position: relative;
+}
+
+.contact .php-email-form .form-group .form-control {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.contact .php-email-form .form-group .form-control:focus {
   border-color: #149ddd;
-  box-shadow: none;
 }
 
-.contact .form-control,
-.contact .form-control:focus {
-  border: 1px solid #e3e6ef;
-  color: #333;
-}
-
-.contact .form-control::placeholder {
-  color: #a3a4b1;
-}
-
-.contact .form-control:focus::placeholder {
-  color: #e3e6ef;
-}
-
-.contact .form-control,
-.contact .form-group {
-  margin-bottom: 15px;
-}
-
-.contact .form-control:focus,
-.contact .form-control:focus::-webkit-input-placeholder {
-  color: #149ddd;
+.contact .php-email-form .form-group .validate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  font-size: 12px;
+  color: #dc3545;
+  text-align: center;
+  padding: 0 15px;
+  pointer-events: none;
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-footer {
+.footer {
   padding: 60px 0;
   background: #040b14;
   color: #fff;
 }
 
-footer h3 {
+.footer .footer-top {
+  padding-bottom: 30px;
+}
+
+.footer .footer-top h3 {
+  font-size: 28px;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 20px;
 }
 
-footer h3::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #149ddd;
-  margin-top: 10px;
+.footer .footer-top p {
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
-footer .social-links a {
+.footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
+  background: #212431;
   color: #fff;
-  line-height: 0;
-  margin-right: 10px;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
   transition: 0.3s;
 }
 
-footer .social-links a:hover {
-  color: #149ddd;
+.footer .footer-top .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
 }
 
-footer .copyright {
+.footer .footer-bottom {
+  padding: 20px 0;
   text-align: center;
-  margin: 20px 0;
+}
+
+.footer .footer-bottom p {
+  margin: 0;
   font-size: 14px;
 }
 
 /*--------------------------------------------------------------
-# Responsive Media Queries
+# Responsive Classes
 --------------------------------------------------------------*/
-@media (max-width: 768px) {
-  #header {
-    width: 100%;
-    left: -100%;
-    transition: all ease-in-out 0.3s;
-  }
-
-  #main {
-    margin-left: 0;
-  }
-
-  .container,
-  .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
 @media (max-width: 576px) {
-  #hero h1 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  #hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .card {
-    flex: 1 1 calc(100% - 20px);
+  .footer .footer-top .social-links a {
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
   }
 }
